@@ -6,6 +6,10 @@
   <title>Евросток - одежда их Европы | Рогачев</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- Навигация -->
@@ -32,25 +36,25 @@
 <!-- Герой секция -->
 <section class="hero" id="home">
   <div class="hero-content">
-    <h1>Стиль с историей. Качество с характером.</h1>
-    <p>Одежда из Европы с уникальным подходом к выбору одежды и аксессуаров.</p>
+    <h1 class="text-6xl md:text-8xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 mt-4">Одежда из Европы</h1>
+<!--    <p>Одежда из Европы с уникальным подходом к выбору одежды и аксессуаров.</p>-->
 <!--    <p>Откройте для себя уникальные вещи с душой в нашем магазине секонд-хенд. Мы тщательно отбираем каждую вещь, чтобы предложить вам качественную одежду по доступным ценам.</p>-->
     <a href="#categories" class="btn">Смотреть коллекцию</a>
   </div>
-  <div class="floating-images">
-    <div class="floating-item">
-      <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Винтажная одежда">
-    </div>
-    <div class="floating-item">
-      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Стильная куртка">
-    </div>
-    <div class="floating-item">
-      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Джинсы">
-    </div>
-    <div class="floating-item">
-      <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Платья">
-    </div>
-  </div>
+<!--  <div class="floating-images">-->
+<!--    <div class="floating-item">-->
+<!--      <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Винтажная одежда">-->
+<!--    </div>-->
+<!--    <div class="floating-item">-->
+<!--      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Стильная куртка">-->
+<!--    </div>-->
+<!--    <div class="floating-item">-->
+<!--      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Джинсы">-->
+<!--    </div>-->
+<!--    <div class="floating-item">-->
+<!--      <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Платья">-->
+<!--    </div>-->
+<!--  </div>-->
 </section>
 
 <!-- О нас -->
@@ -134,7 +138,7 @@
         </div>
         <div class="contact-item">
           <i class="fas fa-phone"></i>
-          <span>+375 (29) 111-11-11</span>
+          <span>+375 (29) 614-98-83</span>
         </div>
 
         <div class="contact-item">
@@ -145,11 +149,11 @@
 
         <div class="contact-item">
           <i class="fas fa-map-marker-alt"></i>
-          <span>г. Рогачев, ул. Ленина 45/3</span>
+          <span>г. Рогачев, ул. Ленина 45</span>
         </div>
         <div class="contact-item">
           <i class="fas fa-phone"></i>
-          <span>+375 (29) 111-11-11</span>
+          <span>+375 (29) 108-28-28</span>
         </div>
 
         <div class="contact-item">
@@ -163,26 +167,59 @@
       <h3>Напишите нам в мессенджер</h3>
       <p>Выберите удобный способ связи. Мы ответим в течение 15 минут в рабочее время.</p>
       <div class="messenger-buttons">
-        <a href="viber://chat?number=375291111111" class="messenger-btn viber-btn">
+        <a href="viber://chat?number=375296149883" class="messenger-btn viber-btn">
           <i class="fab fa-viber"></i>
           <span>Написать в Viber</span>
         </a>
-        <a href="https://t.me/link" class="messenger-btn telegram-btn">
+        <a href="https://t.me/+375296149883" class="messenger-btn telegram-btn">
           <i class="fab fa-telegram"></i>
           <span>Написать в Telegram</span>
-        </a>
-        <a href="https://wa.me/375291111111" class="messenger-btn whatsapp-btn">
-          <i class="fab fa-whatsapp"></i>
-          <span>Написать в WhatsApp</span>
         </a>
       </div>
       <p class="messenger-note">* Нажимая на кнопку, вы переходите в приложение мессенджера</p>
     </div>
   </div>
 </section>
+<!--map-->
+<section class="bg-white py-16 w-full">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+      <!-- Карта -->
+      <div class="lg:col-span-3">
+        <div id="map" class="w-full h-80 lg:h-96 rounded-xl shadow-lg"></div>
+      </div>
+
+      <!-- Контент -->
+      <div class="lg:col-span-2 space-y-6">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-2">Найдите нас</h2>
+          <p class="text-gray-600">Мы находимся в удобном месте с хорошей транспортной доступностью</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg">
+            <span class="text-blue-500 mt-1">📍</span>
+            <div>
+              <h4 class="font-semibold">Адрес</h4>
+              <p class="text-gray-600">г. Рогачев, ул. Ленина, д.45</p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg">
+            <span class="text-blue-500 mt-1">📍</span>
+            <div>
+              <h4 class="font-semibold">Адрес</h4>
+              <p class="text-gray-600">г. Рогачев, ул. Урицкого д.110,</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Футер -->
-<footer>
+<footer class="bg-gray-800 text-white py-8">
   <div class="footer-content">
     <div class="footer-column">
       <h3>Евросток | Рогачев</h3>
@@ -204,16 +241,10 @@
         <li><a href="#contact">Контакты</a></li>
       </ul>
     </div>
-    <div class="footer-column">
-      <h3>Категории</h3>
-      <ul class="footer-links">
-        <li><a href="#">Женская одежда</a></li>
-        <li><a href="#">Мужская одежда</a></li>
-        <li><a href="#">Детская одежда</a></li>
-        <li><a href="#">Аксессуары</a></li>
-        <li><a href="#">Винтажные вещи</a></li>
-      </ul>
-    </div>
+
+
+
+
     <div class="footer-column">
       <h3>Подписка на новости</h3>
       <p>Будьте в курсе новых поступлений и специальных предложений.</p>
@@ -227,9 +258,10 @@
     <p>&copy; 2025 | Все права защищены. <a href="https://dmitry-dev.vercel.app/">Разработка сайтов</a> </p>
   </div>
 </footer>
-
+<script src="https://api-maps.yandex.ru/2.1/?apikey=b0c10365-c62f-4725-a84d-c04a11d00f97&lang=ru_RU"></script>
 <script src="script.js">
 
 </script>
+
 </body>
 </html>

@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    font-family: 'Roboto', sans-serif;}
 
 :root {
     --primary: #42802d;
@@ -104,22 +103,35 @@ nav {
     overflow: hidden;
     background: linear-gradient(135deg, var(--light) 0%, #f0e6d2 100%);
 }
+.hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/main_photo.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+}
 
 
 .hero-content {
     text-align: center;
     z-index: 2;
-    max-width: 50%;
+    max-width: 70%;
     padding: 0 2rem;
     animation: fadeInUp 1s ease-out;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-}
+/*.hero h1 {*/
+/*    font-size: 4rem;*/
+/*    margin-bottom: 1rem;*/
+/*    color: #383838;*/
+/*    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);*/
+/*}*/
 
 .hero p {
     font-size: 1.2rem;
@@ -131,6 +143,7 @@ nav {
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
+    margin-top: 20px;
     background-color: var(--primary);
     color: white;
     border: none;
@@ -514,8 +527,8 @@ nav {
 
 /* Футер */
 footer {
-    background-color: var(--dark);
-    color: white;
+    background-color: white;
+    color: black;
     padding: 3rem 5% 1rem;
 }
 
@@ -548,7 +561,7 @@ footer {
 }
 
 .footer-links a {
-    color: #ccc;
+    color: #808080;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -631,9 +644,9 @@ footer {
         flex-direction: column;
     }
 
-    .hero h1 {
-        font-size: 2.8rem;
-    }
+    /*.hero h1 {*/
+    /*    font-size: 2.8rem;*/
+    /*}*/
 }
 
 @media (max-width: 768px) {
@@ -663,9 +676,9 @@ footer {
         display: block;
     }
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+    /*.hero h1 {*/
+    /*    font-size: 2.2rem;*/
+    /*}*/
 
     .floating-item {
         display: none;

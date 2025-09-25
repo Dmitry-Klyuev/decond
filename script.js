@@ -68,3 +68,76 @@ document.querySelectorAll('.messenger-btn').forEach(btn => {
     // Здесь можно добавить счетчик аналитики
   });
 });
+
+ymaps.ready(init);
+
+function init() {
+  const map = new ymaps.Map('map', {
+    center: [53.082110, 30.053237],
+    zoom: 13,
+    controls: ['zoomControl', 'fullscreenControl']
+  });
+
+  // Точки на карте
+  const points = [
+    {
+      id: 1,
+      coords: [53.076641, 30.051692],
+      title: 'Королевская тысяча',
+      color: '#10B981', // green-500
+      balloonContent: `
+                <div class="p-4">
+                    <h4 class="font-bold text-lg mb-2">Королевская тысяча</h4>
+                    <p class="text-gray-600">г. Рогачев, ул. Ленина, д. 45</p>
+                    <p class="text-gray-600">+375291082828</p>
+                </div>
+            `
+    },
+    {
+      id: 2,
+      coords: [53.087059, 30.050398],
+      title: 'Евросток',
+      color: '#3B82F6', // blue-500
+      balloonContent: `
+                <div class="p-4">
+                    <h4 class="font-bold text-lg mb-2">Евросток</h4>
+                    <p class="text-gray-600">г. Рогачев, ул. Урицкого, д. 110</p>
+                    <p class="text-gray-600">+375296149873</p>
+                </div>
+            `
+    },
+  ];
+
+  // Создаем метки
+  points.forEach(point => {
+    const placemark = new ymaps.Placemark(point.coords, {
+      balloonContent: point.balloonContent,
+      iconCaption: point.title
+    }, {
+      preset: 'islands#circleIcon',
+      iconColor: point.color
+    });
+
+    map.geoObjects.add(placemark);
+  });
+
+  // Обработчики для списка точек
+  document.querySelectorAll('.point-item').forEach(item => {
+    item.addEventListener('click', function() {
+      const pointId = parseInt(this.dataset.point);
+      const point = points.find(p => p.id === pointId);
+
+      if (point) {
+        map.setCenter(point.coords, 15);
+
+        // Удаляем активные классы у всех элементов
+        document.querySelectorAll('.point-item').forEach(i => {
+          i.classList.remove('bg-blue-50', 'border-l-4', 'border-green-500');
+        });
+
+        // Добавляем активные классы к текущему элементу
+        this.classList.add('bg-blue-50', 'border-l-4', 'border-green-500');
+      }
+    });
+  });
+}
